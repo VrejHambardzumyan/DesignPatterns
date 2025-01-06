@@ -1,6 +1,6 @@
-#Factory Method Design Pattern
+# Factory Method Design Pattern
 
-###The Factory Method Pattern is a creational design pattern that defines an interface for creating objects but allows subclasses to alter the type of objects that will be created. It helps promote loose coupling between the client code and the classes it instantiates.
+### The Factory Method Pattern is a creational design pattern that defines an interface for creating objects but allows subclasses to alter the type of objects that will be created. It helps promote loose coupling between the client code and the classes it instantiates.
 
 In this example, we demonstrate how different types of PizzaStore (e.g., CheesePizzaStore, PepperoniPizzaStore) implement the createPizza method to instantiate specific types of Pizza.
 
