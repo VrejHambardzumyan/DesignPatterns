@@ -126,18 +126,36 @@ int main() {
 
 ```mermaid
 classDiagram
- class Factory {
-        +createProduct()
-    }
     class Product {
         <<interface>>
-        +operation()
+        +operation(): void
     }
-    class ConcreteProduct {
-        +operation()
+
+    class ConcreteProductA {
+        +operation(): void
     }
-    Factory ..> Product
-    Product <|.. ConcreteProduct
+
+    class ConcreteProductB {
+        +operation(): void
+    }
+
+    class Creator {
+        +createProduct(): Product
+    }
+
+    class ConcreteCreatorA {
+        +createProduct(): Product
+    }
+
+    class ConcreteCreatorB {
+        +createProduct(): Product
+    }
+
+    Product <|.. ConcreteProductA
+    Product <|.. ConcreteProductB
+    Creator <|.. ConcreteCreatorA
+    Creator <|.. ConcreteCreatorB
+    Creator --> Product: creates
 
 ```
 
