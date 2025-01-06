@@ -201,39 +201,6 @@ int main() {
 
 ---
 
-## UML Diagram
-
-```plantuml
-@startuml
-interface Tree {
-    + void insert(int value)
-    + void traverse() const
-}
-
-class BinarySearchTree {
-    - TreeNode* root
-    + void insert(int value)
-    + void traverse() const
-}
-
-class SimpleBinaryTree {
-    - TreeNode* root
-    + void insert(int value)
-    + void traverse() const
-}
-
-class TreeStructure {
-    - Tree* tree
-    + void setTree(Tree* t)
-    + void insert(int value)
-    + void traverse() const
-}
-
-Tree <|.. BinarySearchTree
-Tree <|.. SimpleBinaryTree
-TreeStructure o--> Tree
-@enduml
-```
 
 ---
 
