@@ -50,13 +50,6 @@ public:
 std::atomic<Singleton*> Singleton::instance{nullptr};
 std::mutex Singleton::mutex;
 
-int main() {
-    Singleton* singleton = Singleton::getInstance();
-    singleton->showMessage();
-    return 0;
-}
-
-
 ```
 
 ---
