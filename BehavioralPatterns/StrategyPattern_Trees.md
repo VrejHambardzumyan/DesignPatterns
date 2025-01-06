@@ -198,7 +198,9 @@ int main() {
 
 4. **Dynamic Behavior**:
    - By switching the `Tree` implementation, the client (main function) can use different tree structures at runtime.
+---
 
+UML Diagram
 ---
 
 ```mermaid
