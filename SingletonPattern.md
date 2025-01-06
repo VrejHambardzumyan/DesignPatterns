@@ -115,8 +115,8 @@ classDiagram
 1. **Global State**:
    - Can introduce hidden dependencies and make testing more difficult.
 
-2.**Complexity**:
-  - Thread-safe implementations (like this one) are more complex than naive implementations. 
+2. **Complexity**:
+   - Thread-safe implementations (like this one) are more complex than naive implementations. 
 
 3. **Resource Management**:
    - Requires careful handling of instance destruction in some cases.
