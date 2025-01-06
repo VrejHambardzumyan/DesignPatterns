@@ -111,22 +111,6 @@ unique_ptr<GUIFactory> createOSSpecificFactory(const string& osType) {
     throw runtime_error("Unsupported operating system");
 }
 
-int main() {
-    string currentOS[] = {"Windows", "MacOS"};
-
-    for (const auto& os : currentOS) {
-        cout << "Creating UI for " << os << " environment:" << endl;
-
-        auto factory = createOSSpecificFactory(os);
-
-        Application app;
-        app.createUI(*factory);
-        app.paint();
-
-        cout << endl;
-    }
-}
-
 ```
 
 ---
