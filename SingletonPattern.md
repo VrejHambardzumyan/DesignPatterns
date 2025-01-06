@@ -93,11 +93,6 @@ classDiagram
         -Singleton()
         +getInstance(): Singleton
     }
-
-    Singleton : +getInstance() Singleton
-    Singleton : -Singleton() Singleton
-
-
 ```
 
 ---
