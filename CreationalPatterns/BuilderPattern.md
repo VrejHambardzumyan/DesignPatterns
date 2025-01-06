@@ -138,26 +138,6 @@ public:
     }
 };
 
-int main() {
-    cout << "Custom Computer:" << endl;
-    auto customComputer = ComputerBuilder::create()
-        .setCPU("AMD Ryzen 7")
-        .setRAM(16)
-        .setStorage(512, "NVMe SSD")
-        .setGPU("AMD Radeon RX 6700")
-        .addPeripheral("Wireless Keyboard")
-        .addPeripheral("Bluetooth Mouse")
-        .build();
-    customComputer->showSpecs();
-
-    cout << "\nGaming Computer:" << endl;
-    auto gamingComputer = ComputerDirector::buildGamingComputer();
-    gamingComputer->showSpecs();
-
-    cout << "\nOffice Computer:" << endl;
-    auto officeComputer = ComputerDirector::buildOfficeComputer();
-    officeComputer->showSpecs();
-}
 
 ```
 
