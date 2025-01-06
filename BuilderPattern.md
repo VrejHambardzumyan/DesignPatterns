@@ -228,7 +228,7 @@ classDiagram
 
 1. **Complexity**:
    - Adds extra classes and methods, which might be overkill for simpler objects.
-3. **Validation**:
+2. **Validation**:
    - Constraints need to be explicitly enforced in the builder (build method).
 
 ---
@@ -238,4 +238,3 @@ classDiagram
 - When constructing complex objects with many optional parameters.
 - When you need to enforce constraints during the object construction process.
 - When creating objects with similar steps but different configurations (e.g., gaming vs. office computers).
-
