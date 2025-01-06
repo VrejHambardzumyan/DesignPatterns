@@ -113,32 +113,30 @@ int main() {
 
 ## UML Diagram
 
-```plantuml
-@startuml
-interface Observer {
-    + update(float temperature, float humidity, float pressure)
-}
-
-class PhoneDisplay {
-    + update(float temperature, float humidity, float pressure)
-}
-
-class DesktopDisplay {
-    + update(float temperature, float humidity, float pressure)
-}
-
-class WeatherStation {
-    - vector<Observer*> observers
-    + addObserver(Observer* observer)
-    + removeObserver(Observer* observer)
-    + notifyObservers()
-    + setWeatherData(float temp, float hum, float press)
-}
-
-Observer <|.. PhoneDisplay
-Observer <|.. DesktopDisplay
-WeatherStation o--> Observer
-@enduml
+```mermaid
+ class Subject {
+        -observers: List
+        +attach(Observer)
+        +detach(Observer)
+        +notify()
+    }
+    class Observer {
+        <<interface>>
+        +update()
+    }
+    class ConcreteSubject {
+        -state
+        +getState()
+        +setState()
+    }
+    class ConcreteObserver {
+        -state
+        +update()
+    }
+    Subject <|-- ConcreteSubject
+    Subject o--> Observer
+    Observer <|.. ConcreteObserver
+    ConcreteObserver --> ConcreteSubject
 ```
 
 ---
