@@ -201,9 +201,34 @@ int main() {
 
 ---
 
+```mermaid
+classDiagram
+   class Context {
+       -Strategy strategy
+       +setStrategy(Strategy)
+       +executeStrategy()
+   }
+   class Strategy {
+       <<interface>>
+       +algorithm()
+   }
+   class ConcreteStrategyA {
+       +algorithm()
+   }
+   class ConcreteStrategyB {
+       +algorithm()
+   }
+   class ConcreteStrategyC {
+       +algorithm()
+   }
+   
+   Context o-- Strategy
+   Strategy <|.. ConcreteStrategyA
+   Strategy <|.. ConcreteStrategyB
+   Strategy <|.. ConcreteStrategyC
 
 
-
+---
 ## Advantages
 
 1. **Open/Closed Principle**: Easily add new tree types without modifying existing code.
