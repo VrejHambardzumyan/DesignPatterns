@@ -89,18 +89,6 @@ public:
     }
 };
 
-int main() {
-
-    unique_ptr<PizzaStore> cheesePizzaStore = make_unique<CheesePizzaStore>();
-    unique_ptr<PizzaStore> pepperoniPizzaStore = make_unique<PepperoniPizzaStore>();
-
-    cout << "Ordering from Cheese Pizza Store:" << endl;
-    auto cheesePizza = cheesePizzaStore->orderPizza();
-
-    cout << "\nOrdering from Pepperoni Pizza Store:" << endl;
-    auto pepperoniPizza = pepperoniPizzaStore->orderPizza();
-}
-
 ```
 
 ---
