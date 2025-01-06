@@ -90,7 +90,7 @@ classDiagram
     }
 
     Target <|.. Adapter
-    Adapter --> Adapter
+    Adapter --> Adaptee
 
 
 ```
