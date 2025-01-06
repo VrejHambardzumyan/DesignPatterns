@@ -38,20 +38,6 @@ public:
     }
 };
 
-int main() {
-
-    OldSystem* oldSystem = new OldSystem();
-
-    NewSystem* newSystem = new Adapter(oldSystem);
-
-    newSystem->newRequest();  
-
-    delete oldSystem;
-    delete newSystem;
-
-}
-
-
 ```
 
 ---
