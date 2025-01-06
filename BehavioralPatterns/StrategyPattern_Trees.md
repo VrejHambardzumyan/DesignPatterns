@@ -153,30 +153,6 @@ public:
     }
 };
 
-int main() {
-    TreeStructure treeStructure;
-
-    treeStructure.setTree(new BinarySearchTree());
-    treeStructure.insert(5);
-    treeStructure.insert(3);
-    treeStructure.insert(7);
-    treeStructure.insert(1);
-    treeStructure.insert(4);
-
-    std::cout << "Binary Search Tree Traversal: ";
-    treeStructure.traverse();
-
-    treeStructure.setTree(new SimpleBinaryTree());
-    treeStructure.insert(10);
-    treeStructure.insert(20);
-    treeStructure.insert(30);
-    treeStructure.insert(40);
-
-    std::cout << "Simple Binary Tree Traversal: ";
-    treeStructure.traverse();
-
-    return 0;
-}
 ```
 
 ---
