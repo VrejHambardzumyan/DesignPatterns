@@ -89,11 +89,14 @@ int main() {
 ```mermaid
 classDiagram
     class Singleton {
-        - instance: Singleton
-        - Singleton()
-        + getInstance() : Singleton
+        -instance: Singleton
+        -Singleton()
+        +getInstance(): Singleton
     }
-    Singleton --> Singleton
+
+    Singleton : +getInstance() Singleton
+    Singleton : -Singleton() Singleton
+
 
 ```
 
