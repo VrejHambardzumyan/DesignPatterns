@@ -70,24 +70,6 @@ public:
     }
 };
 
-int main() {
-    
-    WeatherStation weatherStation;
-
-    PhoneDisplay phoneDisplay;
-    DesktopDisplay desktopDisplay;
-
-    weatherStation.addObserver(&phoneDisplay);
-    weatherStation.addObserver(&desktopDisplay);
-
-    weatherStation.setWeatherData(22.5, 65.0, 1013.2);
-    weatherStation.setWeatherData(23.0, 60.0, 1012.8);
-
-    weatherStation.removeObserver(&desktopDisplay);
-
-    weatherStation.setWeatherData(24.5, 55.0, 1010.0);
-
-}
 ```
 
 ---
