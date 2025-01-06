@@ -186,28 +186,34 @@ int main() {
 
 ```mermaid
 classDiagram
- class Director {
-        -builder: Builder
-        +construct()
+    class Product {
+        +setPartA(): void
+        +setPartB(): void
+        +show(): void
     }
+
     class Builder {
         <<interface>>
-        +buildPartA()
-        +buildPartB()
-        +getResult()
+        +buildPartA(): void
+        +buildPartB(): void
+        +getResult(): Product
     }
-    class ConcreteBuilder {
-        -product: Product
-        +buildPartA()
-        +buildPartB()
-        +getResult()
+
+    class ConcreteBuilder1 {
+        +buildPartA(): void
+        +buildPartB(): void
+        +getResult(): Product
     }
-    class Product {
-        -parts: List
+
+    class Director {
+        +construct(): void
     }
-    Director o--> Builder
-    Builder <|.. ConcreteBuilder
-    ConcreteBuilder ..> Product
+
+    Product <--o Builder
+    Builder <|.. ConcreteBuilder1
+    Director --> Builder: uses
+    Director --> Product
+
 ```
 
 ---
