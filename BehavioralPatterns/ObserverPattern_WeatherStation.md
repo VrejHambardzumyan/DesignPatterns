@@ -114,6 +114,7 @@ int main() {
 ## UML Diagram
 
 ```mermaid
+classDiagram
  class Subject {
         -observers: List
         +attach(Observer)
