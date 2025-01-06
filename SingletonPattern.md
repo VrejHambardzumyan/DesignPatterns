@@ -88,13 +88,12 @@ int main() {
 
 ```mermaid
 classDiagram
-  class Singleton {
-        -static instance: Singleton
+    class Singleton {
+        -instance: Singleton$
         -Singleton()
-        +static getInstance() Singleton
-        +businessMethod()
+        +getInstance() Singleton$
     }
-    Singleton ..> Singleton
+    Singleton --> Singleton : creates
 ```
 
 ---
