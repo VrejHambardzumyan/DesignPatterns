@@ -1,7 +1,8 @@
 
 # Strategy Design Pattern
 
-### The Strategy Design Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from the clients that use it. In this implementation, we demonstrate a `TreeStructure` system where the tree type strategy (e.g., Binary Search Tree or Simple Binary Tree) can be dynamically set at runtime.
+### The Strategy Design Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from the clients that use it.
+In this implementation, we demonstrate a `TreeStructure` system where the tree type strategy (e.g., Binary Search Tree or Simple Binary Tree) can be dynamically set at runtime.
 
 ---
 
